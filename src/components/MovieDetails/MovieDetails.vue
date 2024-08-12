@@ -20,6 +20,19 @@
            <font-awesome-icon :icon="['fas', 'minus']" class="MovieDetails__btn-icon" fixed-width /> My List
         </button>
       </div>
+      <div class="container">
+        <i class="arrow" @click="step = 0"></i>
+        <div class="wrapper-iframe">
+          <iframe
+              :src="`https://vidsrc.xyz/embed/movie?tmdb=${movie.id}`"
+              loading="lazy"
+              style="border: none; height: 100%; width: 100%"
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+              allowfullscreen="true"
+          >
+          </iframe>
+        </div>
+      </div>
     </div>
     <div class="MovieDetails__fade--bottom" />
   </div>
@@ -28,7 +41,7 @@
 <script>
   import MovieLabels from '../MovieLabels/MovieLabels';
   import getImageUrl from '../../helpers/getImageUrl';
-  import { actions } from '../../helpers/constants';
+  import { actions } from '@/helpers/constants';
 
   export default {
     name: 'MovieDetails',

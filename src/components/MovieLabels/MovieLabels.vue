@@ -1,7 +1,7 @@
 <template>
   <div class="MovieLabels">
     <span :class="['MovieLabels__rate', `MovieLabels__rate--${movieRateColor}`]">
-      {{ movieRate }} Match
+      {{ movieRate }} <span class="MovieLabels__heart">👍</span>
     </span>
     <span class="MovieLabels__date">
       {{ movieReleaseDate }}
@@ -21,12 +21,12 @@
     },
     computed: {
       movieRate() {
-        return `${this.movie.vote_average * 10}%`;
+        return Math.round(this.movie.vote_average * 10) + '%';
       },
       movieRateColor() {
         const percent = this.movie.vote_average * 10;
-        if (percent < 30) return 'red';
-        if (percent < 50) return 'yellow';
+        if (percent < 60) return 'red';
+        if (percent < 70) return 'yellow';
         return 'green';
       },
       movieReleaseDate() {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import { routes } from '../../helpers/constants';
+  import { routes } from '@/helpers/constants';
 
   export default {
     name: 'StartNow',
