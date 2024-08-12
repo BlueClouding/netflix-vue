@@ -1,4 +1,4 @@
-import { store } from "../store/index.js";
+import { store } from "@/store";
 
 function getImageUrl(url, size = 3, type) {
   const config = store.getters.configuration;
