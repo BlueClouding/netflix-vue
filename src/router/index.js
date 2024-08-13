@@ -23,7 +23,7 @@ const router = new Router({
   routes: [
     {
       path: '*',
-      redirect: '/netflix-vue/',
+      redirect: '/',
     },
     {
       path: routes.startNow,

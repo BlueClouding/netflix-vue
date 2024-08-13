@@ -7,15 +7,6 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>vue-netflix-clone</title>
   </head>
-  <script>
-      (function () {
-          const redir = sessionStorage.redirect;
-          delete sessionStorage.redirect;
-          if (redir && redir !== location.href) {
-              history.replaceState(null, null, redir);
-          }
-      })();
-  </script>
   <body>
     <noscript>
       <strong>We're sorry but vue-netflix-clone doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
