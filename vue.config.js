@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: '/netflix-vue/',
   runtimeCompiler: true,
   productionSourceMap: false,
   chainWebpack: config => {
